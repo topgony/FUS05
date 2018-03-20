@@ -135,6 +135,11 @@ body{
     .menu-act{
         transform: translateX(0);
     }
+    .main .box{
+        min-height: 100px;
+        margin: 1em;
+        
+    }
 }
 
 /* 모바일 lg 디바이스 */
@@ -148,6 +153,7 @@ body{
     .btn-wrapper{
         display: none;
     }
+    
     .menu{
         display: flex;
         justify-content: space-around;
@@ -158,6 +164,18 @@ body{
         text-transform: uppercase;
 
     }
+    /* 모바일 main */
+    .main{
+        background: orange;
+    }
+    .box{
+        background: lime;
+    }
+    .box1{
+        background: skyblue;
+        float: right;
+    }
+    /* 모바일 footer */
 }
 
 /* 데스크탑 디바이스 */
@@ -185,7 +203,7 @@ body{
     .btn-wrapper{
         display: none;
     }
-    
+
     .menu{
         grid-area: menu;
         display: flex;
@@ -205,9 +223,22 @@ body{
     .ad{
         height: 50vh;
     }
+    /* 데스크탑 main */
     .main{
-        height: 50vh;
+        background: yellow;
+        display: grid;
+        grid-template-areas: "box box box box";
+        grid-auto-columns: 23%;
+        grid-auto-rows: 150px;
+        justify-content: space-between;
+        grid-gap: 20px;
+        padding: 2em;
+        
     }
+    .main .box {
+        background: pink;
+    }
+    /* 데스크탑 footer */
     .footer{
         height: 50vh;
     }
