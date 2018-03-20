@@ -36,15 +36,15 @@ body{
 .ad{
    color:#fff; 
    font-size: 3em;
+   min-height: 500px;
    /* display: flex;
    justify-content: center;
    align-items:flex-end;
    padding-bottom: 1em; */
 }
 .ad-contents{
-    background: blue;
     position: sticky;
-    top:100px;
+    top: 100px;
     text-align: right;
 }
 
@@ -57,9 +57,86 @@ body{
     background: #181818;
     color:#fff;
 }
+/* 모바일 sm 디바이스  */
+@media screen and (min-width:1px) and (max-width:549px){
+    /* 모바일 sm 로고 */
+    .logo{
+        background: yellow;
+        width: 30%;
+        margin-left: 1em;
+    }
+    /* 모바일 sm 메뉴 */
+    .btn-wrapper{
+        background: skyblue;
+        position: fixed;
+        top: 0.5em;
+        right: 0.5em;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+    .btn-menubar{
+        border:0;
+        background: transparent;
+        padding: 0;
+        color:rgba(0,0,0,0);
+        cursor: pointer;
 
-/* 모바일 디바이스 */
-@media screen and (max-width:999px){
+    }
+    .menubar{
+        position: absolute; /*display block 이 되버림 기본으로 */
+        background:#181818;
+        left:0;
+        border-radius: 10px;
+        width: 100%;
+        height: 25%;
+        cursor: pointer;
+    }
+    .menubar-top{
+        top:0;
+    }
+    .menubar-act.menubar-top{
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .menubar-middle{
+        top:50%;
+        transform: translateY(-50%);
+    }
+    .menubar-act.menubar-middle{
+        transform: translate(-100%,-50%);
+    }
+
+    .menubar-bottom{
+        top:100%;
+        transform: translateY(-100%);
+    }
+    .menubar-act.menubar-bottom{
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .menu{
+        background: rgba(0,0,0,.8);
+        color: white;
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 70%;
+        height: 100vh;
+        z-index: 10;
+        padding: 3em 0 0 2em;
+        transform: translateX(-100%);
+        transition: all 0.3s;
+    }
+    .menu-act{
+        transform: translateX(0);
+    }
+}
+
+/* 모바일 lg 디바이스 */
+@media screen and (min-width:550px) and (max-width:999px){
     /* 모바일 로고 */
     .logo{
         width: 50%;
@@ -67,7 +144,6 @@ body{
     }
     /* 모바일 메뉴 */
     .menu{
-        background: orange;
         display: flex;
         justify-content: space-around;
     }
