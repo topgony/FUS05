@@ -91,6 +91,7 @@ body{
         width: 100%;
         height: 25%;
         cursor: pointer;
+        transition: all 0.2s;
     }
     .menubar-top{
         top:0;
@@ -98,6 +99,7 @@ body{
     .menubar-act.menubar-top{
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
+        
     }
 
     .menubar-middle{
@@ -143,6 +145,9 @@ body{
         margin: 0 auto;
     }
     /* 모바일 메뉴 */
+    .btn-wrapper{
+        display: none;
+    }
     .menu{
         display: flex;
         justify-content: space-around;
@@ -177,6 +182,10 @@ body{
         width: 20%;
     }
     /* 데스크탑 메뉴 */
+    .btn-wrapper{
+        display: none;
+    }
+    
     .menu{
         grid-area: menu;
         display: flex;
